@@ -1,6 +1,6 @@
 # MCP Server Tutorial
 
-This repository contains a simple MCP (Machine Conversation Protocol) server built with FastMCP. The server provides various mathematical operations as tools that can be used through the MCP protocol.
+This repository contains a simple MCP (Model Context Protocol) server built with FastMCP. The server provides various mathematical operations as tools that can be used through the MCP protocol.
 
 ## Features
 
@@ -25,7 +25,7 @@ This repository contains a simple MCP (Machine Conversation Protocol) server bui
 1. Clone this repository
 2. Create and activate a virtual environment:
    ```
-   python -m venv venv
+   uv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 3. Install dependencies:
@@ -48,8 +48,13 @@ The server uses SSE (Server-Sent Events) transport by default, which allows you 
 ### Connecting with MCP Inspector
 
 1. Open MCP Inspector
-2. Connect to the server URL (typically http://localhost:8000)
-3. You can now interact with the mathematical tools and resources defined in the server
+```
+npx @modelcontextprotocol/inspector
+
+```
+3. Choose SSE Transport Type
+4.  Connect to the server URL (typically http://localhost:8000/sse)
+5. You can now interact with the mathematical tools and resources defined in the server
 
 ## Available Tools
 
